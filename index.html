@@ -30,13 +30,20 @@
 
     header{
       text-align:center;
-      padding:20px 0px;
+      padding:10px 0px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
     }
 
     header h1 {
-      font-size: 1.6rem;
-      letter-spacing: 3pt;
+      font-size: 25pt;
+      /* letter-spacing: 1pt; */
       text-shadow: 2px 2px 0px #ff00d8;
+      margin-bottom:5px;
       margin-top:8px;
     }
 
@@ -65,16 +72,22 @@
       color:#ffc7f6;
     }
 
+    .page-content {
+    margin-top: 100px; /* Offset for fixed header height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
     .video-container {
       background-color: #000; /* Dark background */
-      width: 100%;
+      width: 85%;
       max-width: 800px;
-      aspect-ratio: 9 / 11;
-      margin: 0px 0;
+      aspect-ratio: 9 / 12;
+      /* margin: 20px 0; */
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      /* padding: 5px; */
       box-sizing: border-box;
     }
 
@@ -86,9 +99,9 @@
     }
 
     .inverted-logo {
-      width: 50%;
-      max-width: 800px;
-      filter: invert(100%) brightness(200%) hue-rotate(0deg);
+      width: 40%;
+      max-width: 200px;
+      filter: invert(100%) brightness(200%) hue-rotate(0deg) drop-shadow(2px 2px 0px #ff00d8);
     }
 
   </style>
@@ -96,13 +109,12 @@
 <body>
 
   <header>
-    <img class="inverted-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Berluti_logo.svg">
-    <h1>*CUSTOMER SERVICE EXPOSED</h1>
+    
+    <h1><img class="inverted-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Berluti_logo.svg"> EXPOSED</h1>
   </header>
-
+  <div class="page-content">
   <div class="video-container">
     <iframe src="https://www.instagram.com/p/DIt1sZAKOiP/embed" 
-    
             frameborder="0" allowfullscreen>
     </iframe>
   </div>
@@ -119,6 +131,6 @@
  <br><Br><h4>BERLUTI: WE WILL NOT BACK DOWN UNTIL YOU ADOPT COMPANY-WIDE FUR-FREE POLICY IN WRITING. SURRENDER AND SUBMIT YOUR POLICY TO <b>action@caftusa.org</h4>
   <br><br>
   </footer>
-
+</div>
 </body>
 </html>
